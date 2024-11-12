@@ -1,8 +1,396 @@
-.page { min-width: 1100px;
+.page {
     max-width: 1600px;
-    margin: 0 auto;
+    min-width: 1100px;
     font-family: "Inter", Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .header {
+    height: 100vh;
+    min-height: 720px;
+    max-height: 800px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url(../images/background_header.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: #ffffff;
-    color: #000000;}
+  }
+  
+  .nav {
+    position: relative;
+    top: 30px;
+    right: 80px;
+    left: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav__logo {
+    height: 39px;
+    width: 105px;
+  }
+  
+  .nav__links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    position: absolute;
+    right: 80px;
+    list-style: none;
+    color: #000000;
+  }
+  
+  .nav__link {
+    text-decoration: none;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+  }
+  
+  .nav__link:hover {
+    color: #2f80ed;
+  }
+  
+  .header__title {
+    font-family: "Noto Serif", "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 72px;
+    color: #2f80ed;
+    position: relative;
+    padding-top: 183px;
+    padding-left: 80px;
+    max-width: 729px;
+  }
+  
+  .header__span-accent {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 72px;
+    letter-spacing: -1px;
+    display: block;
+    color: #000000;
+  }
+  
+  .header__description {
+    font-family: "Noto Serif", "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 683px;
+    position: relative;
+    left: 80px;
+  }
+  
+  .header__image {
+    max-height: 646px;
+    max-width: 568px;
+    position: absolute;
+    top: 150px;
+    right: -1px;
+    background-size: cover;
+  }
+  
+  .header__footer {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #838383;
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+  
+  .header__paragraph {
+    padding-left: 80px;
+    line-height: 0;
+  }
+  
+  .header__paragraph-address {
+    display: flex;
+    align-items: flex-end;
+    padding-right: 80px;
+  }
+  
+  .content {
+    background-color: #0a2750;
+    background-image: url(../images/background_recipes.svg);
+    background-size: cover;
+  }
+  
+  .recipes {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .recipes__title {
+    max-width: 580px;
+    padding-left: 80px;
+    padding-top: 100px;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 52px;
+    color: #ffffff;
+  }
+  
+  .recipes__subtitle {
+    max-width: 438px;
+    padding-left: 80px;
+    padding-top: 24px;
+    color: #ffffff;
+  }
+  
+  .recipes__videos {
+    display: flex;
+    column-gap: 40px;
+    padding-top: 80px;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .recipes__video-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 215px;
+  }
+  
+  .recipes__iframe {
+    border: none;
+  }
+  
+  .recipes__video-caption {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .reservation {
+    background-image: url(../images/background_reservation.svg);
+    background-color: #d9e7ff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 720px;
+    max-height: 1120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .reservation__title {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 52px;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .form {
+    width: 100%;
+  }
+  
+  .reservation__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 32px;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .reservation__form_label {
+    max-width: 385px;
+    margin: auto;
+    padding-top: 40px;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    column-gap: 32px;
+  }
+  
+  .reservation__label {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 8px;
+    padding-top: 32px;
+  }
+  
+  .reservation__label_top {
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .reservation__item {
+    height: 60px;
+    border-radius: 4px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .reservation__item_input {
+    padding: 15px 20px 15px 20px;
+  }
+  
+  .reservation__item::placeholder {
+    color: #838383;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  
+  .reservation__button {
+    padding-top: 32px;
+  }
+  
+  .reservation__button_div {
+    height: 60px;
+    width: 385px;
+    background-color: #2f80ed;
+    border-radius: 4px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 0;
+  }
+  
+  .reservation__check {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding-top: 32px;
+  }
+  
+  .reservation__item_check {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+  }
+  
+  .reservation__label_paragraph {
+    /* padding-right: 12px;
+    padding-bottom: 120px; */
+    margin: 0;
+    padding: 0 12px 120px 0;
+  }
+  
+  .footer {
+    background-color: #0a2850;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+  }
+  
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px 108px 80px;
+  }
+  
+  .footer__logo {
+    width: 105px;
+    height: 39px;
+    position: relative;
+  }
+  
+  .footer__social {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    padding: 0;
+  }
+  
+  .footer__social-heading {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+  }
+  
+  .footer__list-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .footer__social-link {
+    display: flex;
+    color: #ffffff;
+  }
+  
+  .footer__social-link:hover {
+    color: #c1c1c1;
+  }
+  
+  .footer__social-icon {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+  }
+  
+  .footer__circle {
+    height: 340px;
+    width: 340px;
+    left: -44px;
+    top: -128px;
+    border-radius: 50%;
+    background-color: #2f80ed;
+    z-index: -1;
+    position: absolute;
+  }
+  
+  .footer__copyright {
+    margin: 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0a2850;
+    padding: 0 0 60px 80px;
+  }
